@@ -6,8 +6,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
+    "electron:build": "vue-cli-service electron:build --allow-file-access-from-files",
+    "electron:serve": "vue-cli-service electron:serve --allow-file-access-from-files",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps"
   },
@@ -15,11 +15,12 @@
   "dependencies": {
     "@mdi/font": "^3.6.95",
     "async": "~0.2.9",
-    "js-yaml": "~>3.13.1",
+	"file-saver": "^2.0.2",
+	"js-yaml": "~>3.13.1",
     "register-service-worker": "^1.6.2",
     "roboto-fontface": "*",
     "svg2ttf": "^4.0.1",
-    "svgo": "1.3.0",
+    "svgo": "^1.3.0",
     "svgpath": "~1.0.2",
     "ttf2woff": "~2.0.1",
     "underscore": "~1.5.2",
